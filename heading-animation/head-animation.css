@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+       body{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           min-height: 100vh;
+           background: #0C1739;
+       } 
+       h2{
+           position: relative;
+           font-size: 12vw;
+           color: #0C1739;
+           -webkit-text-stroke: 3px #484848;
+           -o-text-stroke: 3px #484848;
+           -moz-text-stroke: 3px #484848;
+           -ms-text-stroke: 3px #484848;
+       }
+       h2 span{
+           position: relative;
+           font-size: 12vw;
+           color: #0C1739;
+           -webkit-text-stroke: 3px #484848;
+           -o-text-stroke: 3px #484848;
+           -moz-text-stroke: 3px #484848;
+           -ms-text-stroke: 3px #484848;
+       }
+       h2::before{
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        width: 0;
+        height: 100%;
+        color: #FF6347;
+        -webkit-text-stroke: 0;
+        -o-text-stroke: 0;
+        -moz-text-stroke: 0;
+        -ms-text-stroke: 0;
+        animation: codeanimate 5s linear infinite ;
+       }
+       
+       h2 span::after{
+        content: attr(data-me);
+        position: absolute;
+        top: -5;
+        left: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        color: #4140C5;
+        -webkit-text-stroke: 0;
+        -o-text-stroke: 0;
+        -moz-text-stroke: 0;
+        -ms-text-stroke: 0;
+        animation: aseemanimate 5s linear infinite;
+       }
+       @keyframes codeanimate {
+        0%{
+            width: 0;
+            height: 100%;
+        }
+        50%{
+            height: 100%;
+            width: 100%;
+        }
+        100%{
+            height: 0;
+        }
+       }
+       @keyframes aseemanimate {
+           0%{
+               width: 0;
+               height: 100%;
+           }
+           50%{
+               height: 100%;
+               width: 100%;
+           }
+           100%{
+               height: 0;
+           }
+       }
