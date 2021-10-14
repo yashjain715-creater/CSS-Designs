@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  @keyframes comer {
+    0%,
+    10% {
+      width: 0vmin;
+      height: 0vmin;
+      border-radius: 45%;
+      top: 70vmin;
+    }
+  
+    20% {
+      width: 15vmin;
+      height: 13vmin;
+      border-radius: 45%;
+      top: 60vmin;
+    }
+  
+    30% {
+      width: 23vmin;
+      height: 16vmin;
+      border-radius: 45%;
+      top: 55vmin;
+    }
+  
+    50% {
+      width: 23vmin;
+      height: 22vmin;
+      border-radius: 45%;
+      top: 50vmin;
+    }
+  
+    75% {
+      width: 23vmin;
+      height: 29vmin;
+      border-radius: 45%;
+      top: 45vmin;
+    }
+  
+    90% {
+      width: 23vmin;
+      height: 32.2vmin;
+      border-radius: 35%;
+      top: 42vmin;
+    }
+  
+    100% {
+      width: 23vmin;
+      height: 36vmin;
+      border-radius: 10%;
+      top: 37vmin;
+    }
+  }
+  
+  body {
+    display: flex;
+  
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: cornflowerblue;
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    width: 23vmin;
+    height: 36vmin;
+    border-radius: 45%;
+    top: 60vmin;
+    left: 50vw;
+    transform: rotate(5deg) translateX(-50%);
+    background: rgb(255, 255, 255);
+    animation-name: comer;
+    animation-duration: 10s;
+    animation-timing-function: steps(1, jump-start);
+    animation-iteration-count: infinite;
+    z-index: 100;
+  }
+  
+  body::after {
+    content: "";
+    position: absolute;
+    width: 50vmin;
+    height: 50vmin;
+    border-radius: 50%;
+    background: radial-gradient(
+      white 60%,
+      rgb(184, 181, 181) 60.5%,
+      62%,
+      white 63%
+    );
+    top: 54vmin;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+  
+  .pizza {
+    position: relative;
+    top: 54vmin;
+    left: 50vw;
+    width: 20vmin;
+    height: 32vmin;
+    transform: rotate(180deg) translate(50%, 50%);
+  
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: linear-gradient(to bottom, yellow 95%, rgb(173, 142, 41) 95%);
+    z-index: 20;
+  }
+  
+  .pizza::after {
+    content: "";
+    position: absolute;
+    width: 3vmin;
+    height: 3vmin;
+    border-radius: 50% 50% 40% 30%;
+    bottom: 0vmin;
+    right: 0vmin;
+    transform: translateX(-150%) translateY(-120%);
+    box-shadow: -8vmin -2vmin red, 1vmin -7vmin red, -5vmin -9vmin 0 0.3vmin red,
+      -5vmin -18vmin 0 0.3vmin red, -1vmin 2.5vmin 0 -1vmin green,
+      -8vmin 1vmin 0 -1vmin green, -4vmin -2vmin 0 -1vmin green,
+      -2vmin -6vmin 0 -1vmin green, -7vmin -6.5vmin 0 -1vmin green,
+      -1.2vmin -10vmin 0 -1.1vmin green, -5.2vmin -13vmin 0 -1.01vmin green,
+      -2.2vmin -14.5vmin 0 -1.01vmin green, -4.2vmin -21vmin 0 -1.01vmin green,
+      -4vmin -2vmin 0 -1vmin green;
+    background: red;
+  }
