@@ -1,0 +1,299 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #111;
+  }
+  
+  .container {
+    min-width:1200vw;
+    height:100vh;
+  }
+  .pinkShapes {
+    position: absolute;
+    border: 12px solid #e01a70;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .whiteCircles {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 99px;
+    border: 10px solid #f1f1f1;
+    animation: move2 2s ease-out, fadeout 0.5s ease-in-out forwards 1s;
+  }
+  
+  .whiteLines {
+    animation: fadeout 0.5s ease-in-out forwards 1s;
+    position: absolute;
+    border: 7px solid #f1f1f1;
+  }
+  
+  #circle {
+    animation: sgcircle 2s ease-in-out forwards 1.5s, sgcircle2 2s ease-in-out forwards 2s;
+    z-index: 100;
+    margin-top: 200px;
+    margin-left: 140px;
+    width: 40px;
+    height: 40px;
+    border-radius: 99px;
+  }
+  
+  .triangle {
+    animation: sgtr 2s ease-in-out forwards 1.5s, sgtr2 2s ease-in-out forwards 2s;
+    position: absolute;
+    z-index: 99;
+    margin-left: 230px;
+    margin-top: 230px;
+    position: absolute;
+    width: 0px;
+    border-bottom: solid 55px #e01a70;
+    border-right: solid 35px transparent;
+    border-left: solid 35px transparent;
+    filter: drop-shadow(0px -1px 4px rgba(0, 0, 0, 0.35));
+  }
+  
+  .trempty {
+    animation: sgtr 2s ease-in-out forwards 1.5s, sgtr2 2s ease-in-out forwards 2s;
+    background: transparent;
+    position: absolute;
+    z-index: 100;
+    margin-left: 248px;
+    margin-top: 250px;
+    width: 0;
+    border-bottom: solid 27px #111;
+    border-right: solid 17px transparent;
+    border-left: solid 17px transparent;
+  }
+  
+  #square {
+    animation: sgsquare 2s ease-in-out forwards 1.3s, sgsquare2 2s ease-in-out forwards 1.3s;
+    width: 30px;
+    height: 30px;
+    margin-top: 324px;
+    margin-left: 600px;
+  }
+  
+  #shape5 {
+    margin-top: 209px;
+    margin-left: 380px;
+  }
+  
+  #shape5::before {
+    display: block;
+    content: "";
+    margin-left: 160px;
+    margin-top: -10px;
+    z-index: 999;
+    width: 30px;
+    height: 30px;
+    border-radius: 99px;
+    border: 10px solid #f1f1f1;
+  }
+  
+  #shape5::after {
+    display: block;
+    content: "";
+    margin-left: -100px;
+    margin-top: 60px;
+    z-index: 999;
+    width: 30px;
+    height: 30px;
+    border-radius: 99px;
+    border: 10px solid #f1f1f1;
+  }
+  
+  #shape1 {
+    margin-top: 300px;
+    margin-left: 90px;
+    width: 120px;
+    animation: move1 3s ease-out forwards 0.1s, fadeout 0.5s ease-in-out forwards 1s;
+  }
+  
+  #shape2 {
+    transform: rotate(-90deg);
+    margin-top: 280px;
+    margin-left: 144px;
+    width: 40px;
+    animation: move3 2s ease-out forwards 0.1s, fadeout 0.5s ease-in-out forwards 1s;
+  }
+  
+  #shape3 {
+    margin-top: 226px;
+    margin-left: 230px;
+    width: 60px;
+    animation: move1 1.5s ease-out, fadeout 0.5s ease-in-out forwards 1s;
+  }
+  
+  #shape4 {
+    transform: rotate(-90deg);
+    margin-top: 220px;
+    margin-left: 280px;
+    width: 110px;
+    animation: move1 2s ease-out forwards 0.2s, fadeout 1.5s ease-in-out forwards 1s;
+  }
+  
+  #shape6 {
+    margin-top: 226px;
+    margin-left: 428px;
+    width: 15px;
+    animation: fadeout 1.5s ease-in-out forwards 1s;
+  }
+  
+  #shape7 {
+    transform: rotate(-90deg);
+    margin-top: 220px;
+    margin-left: 400px;
+    width: 110px;
+    animation: move1 1.5s ease-out forwards 0.1s, fadeout 0.5s ease-in-out forwards 1s;
+  }
+  
+  #shape8 {
+    transform: rotate(-90deg);
+    margin-top: 220px;
+    margin-left: 580px;
+    width: 110px;
+    animation: fadeout 0.5s ease-in-out forwards 1s;
+  }
+  
+  #shape9 {
+    transform: rotate(-90deg);
+    margin-top: 382px;
+    margin-left: 500px;
+    width: 110px;
+    animation: move1 1.5s ease-out forwards 0.1s, fadeout 0.5s ease-in-out forwards 1s;
+  }
+  
+  #shape10 {
+    animation: move2 1s ease-out forwards 0.1s, fadeout 0.5s ease-in-out forwards 1s;
+    transform: rotate(-90deg);
+    margin-top: 358px;
+    margin-left: 490px;
+    width: 60px;
+  }
+  
+  #shape11 {
+    animation: move1 1.5s ease-out forwards 0.1s, fadeout 1s ease-in-out forwards 1s;
+    margin-top: 330px;
+    margin-left: 430px;
+    width: 60px;
+  }
+  
+  #shape12 {
+    clip-path: polygon(83% 0, 100% 0%, 75% 100%, 59% 83%);
+    transform: rotate(30deg);
+    height: 30px;
+    border: 40px solid #f1f1f1;
+    margin-left: 402px;
+    margin-top: 317px;
+    z-index: 99;
+    filter: drop-shadow(0px -1px 4px rgba(0, 0, 0, 0.35));
+    animation: fadeout 0.5s ease-in-out forwards 1s;
+  }
+  
+  #shape13 {
+    animation: move1 1.5s ease-out forwards 0.1s, fadeout 0.5s ease-in-out forwards 1s;
+    margin-top: 370px;
+    margin-left: 470px;
+    width: 40px;
+  }
+  
+  /* ANIM MOVE */
+  
+  @keyframes move1 {
+    from {
+      left: 40px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+  
+  @keyframes move2 {
+    from {
+      top: 40px;
+    }
+    to {
+      top: 0px;
+    }
+  }
+  
+  @keyframes move3 {
+    from {
+      right: 40px;
+    }
+    to {
+      right: 621px;
+    }
+  }
+  
+  
+  /* ANIM FADEOUT */
+  
+  @keyframes fadeout {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  /* ANIM SGCIRCLE */
+  
+  @keyframes sgcircle {
+    from {
+      left: 0px;
+    }
+    to {
+      left: 210px;
+    }
+  }
+  @keyframes sgcircle2 {
+    from {
+      top: 0px;
+    }
+    to {
+      top: 52px;
+    }
+  }
+  
+  /* ANIM SGTR */
+  
+  @keyframes sgtr {
+    from {
+      left: 0px;
+    }
+    to {
+      left: 200px;
+    }
+  }
+  @keyframes sgtr2 {
+    from {
+      top: 0px;
+    }
+    to {
+      top: 30px;
+    }
+  }
+  
+  /* ANIM SGSQUARE */
+  
+  @keyframes sgsquare {
+    from {
+      left: 0px;
+    }
+    to {
+      left: -80px;
+    }
+  }
+  @keyframes sgsquare2 {
+    from {
+      top: 0px;
+    }
+    to {
+      top: -63px;
+    }
+  }
+  
