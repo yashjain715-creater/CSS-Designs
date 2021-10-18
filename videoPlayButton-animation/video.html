@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Video</title>
+    <link rel="stylesheet" href="./video.css">
+    <!-- <script src="./video.js"></script> -->
+</head>
+<body>
+    <div class="video-button" data-aperture="closed">
+        <div class="video-container" >
+          <video class="actual-video" src="./video.mp4" poster="./image.jpg">
+          </video>
+          <div class="play-button__aperture--left"></div>
+          <div class="play-button__aperture--top-right"></div>
+          <div class="play-button__aperture--bottom-right"></div>
+        </div>
+    </div>
+
+    <script>
+        console.clear();
+
+        var videoEl = document.querySelector('video');
+        document.querySelector('.video-button').addEventListener('click', 
+                                                                    function(){
+        if(this.dataset.aperture === 'open') {
+            this.dataset.aperture = 'closed';
+            videoEl.pause();
+            videoEl.progress = 0;
+        } else {
+            this.dataset.aperture = 'open';
+            videoEl.play();
+        }
+        });
+    </script>
+</body>
+</html>
